@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/resources_page.css" %}">
+    <title>СЕТКА. Ресурсы</title>
+</head>
+<body>
+    <h2 align="center">Ресурсы Сетки</h2>
+    <table class="table" align="center">
+        <thead>
+            <tr>
+                {% for k in header %}
+                <th>{{k}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in rows %}
+                <tr>
+                    <td>{{r.author}}</td>
+                    <td>{{r.name}}</td>
+                    <td><a href="{{ r.link }}">{{r.link}}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
