@@ -1,12 +1,8 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static "css/resources_page.css" %}">
-    <title>СЕТКА. Ресурсы</title>
-</head>
-<body>
+{% block title %}Сетка. Ресурсы{% endblock title %}
+{% block styles %}<link rel="stylesheet" href="{% static "css/resources_page.css" %}">{% endblock styles %}
+{% block content %}
     <h2 align="center">Ресурсы Сетки</h2>
     <table class="table" align="center">
         <thead>
@@ -26,5 +22,4 @@
             {% endfor %}
         </tbody>
     </table>
-</body>
-</html>
+{% endblock content %}
