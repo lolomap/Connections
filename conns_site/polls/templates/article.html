@@ -3,6 +3,9 @@
 {% block content %}
     <h1>{{ article.title }}</h1>
     <div>
+        {{ article.author }}
+    </div>
+    <div>
         {% autoescape off %}
         {{ article.text }}
         {% endautoescape %}
