@@ -1,13 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Сетка. Главная{% endblock title %}
+{%  block styles %}<link rel="stylesheet" href="{% static "css/article.css" %}">{% endblock styles %}
 {% block content %}
-    <h1>{{ article.title }}</h1>
-    <div>
-        {{ article.author }}
-    </div>
-    <div>
-        {% autoescape off %}
-        {{ article.text }}
-        {% endautoescape %}
-    </div>
+
+    <article class="article parent-article">
+        <h1 class="title">{{ article.title }}</h1>
+        <div class="author">
+            Автор статьи: {{ article.author }}
+        </div>
+        <div class="content">
+            {% autoescape off %}
+            {{ article.text }}
+            {% endautoescape %}
+        </div>
+    </article>
 {% endblock content %}

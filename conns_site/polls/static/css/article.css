@@ -1,0 +1,50 @@
+.parent-article {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    text-align: center;
+
+    &::before {
+        height: 100%;
+        display: inline-block;
+        content: '';
+    }
+}
+
+.article title {
+
+}
+
+.article .author {
+
+}
+
+.article .content {
+    background-color: white;
+    width: 60%;
+    height: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 50px;
+    margin-bottom: 100px;
+
+    display: inline-block;
+    white-space: normal;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.article .content {
+    color: black;
+}
+.article .content * {
+    color: black;
+}
+
+.article .content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
