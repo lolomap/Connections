@@ -31,6 +31,8 @@ def article(request, article_id):
 
 def articles(request, page):
 	articleObjs = Article.objects.all().order_by('-id')[(page-1)*10 : (page-1)*10+10]
-	context_data = {'articles': articleObjs}
+	context_data = {'articles': []}
+	for i in articleObjs:
+		context_data['articles'].append((i, i.title.replace(' ', '-')))
 	return TemplateResponse(request, 'articles_list.html', context=context_data)
 

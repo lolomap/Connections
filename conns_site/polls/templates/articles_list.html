@@ -4,7 +4,7 @@
 
 {% for a in articles %}
     <div class="areference">
-        {{ a.title }}
+        <a href="/article/{{ a.1 }}">{{ a.0.title }}</a>
     </div>
 {% endfor %}
 
