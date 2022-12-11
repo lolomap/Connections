@@ -28,3 +28,9 @@ def article(request, article_id):
 		return TemplateResponse(request, 'article.html', context=context_data)
 	except ObjectDoesNotExist:
 		return HttpResponse(f'Статья {aid} не существует')
+
+def articles(request, page):
+	articleObjs = Article.objects.all().order_by('-id')[(page-1)*10 : (page-1)*10+10]
+	context_data = {'articles': articleObjs}
+	return TemplateResponse(request, 'articles_list.html', context=context_data)
+

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Сетка. Статьи{% endblock title %}
+{% block content %}
+
+{% for a in articles %}
+    <div class="areference">
+        {{ a.title }}
+    </div>
+{% endfor %}
+
+{% endblock content %}

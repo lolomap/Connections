@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Сетка. Главная{% endblock title %}
+{% block title %}{{ article.title }}{% endblock title %}
 {%  block styles %}<link rel="stylesheet" href="{% static "css/article.css" %}">{% endblock styles %}
 {% block content %}
 
