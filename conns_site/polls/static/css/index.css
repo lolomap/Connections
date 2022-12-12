@@ -32,5 +32,6 @@ img {
     border-radius: 50%;
 }
 .inner {
-    margin-left: 50px;
+    margin-left: 25px;
+    font-size: 3vw;
 }
